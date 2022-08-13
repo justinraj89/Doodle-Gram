@@ -4,19 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style-new.css'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <title>New Post</title>
 </head>
 <body>
-    <h2>Add your own Artwork Below!</h2>
-    <form action="/artwork" method="POST">
-        <label>Title:</label><br>
-        <input type="text" name="name"><br>
-        <label>Description:</label><br>
-        <input type="text" name="description"><br>
-        <label>IMG url</label><br>
-        <input type="text" name="img"><br>
-        <br>
-        <input type="submit" value="submit">
-      </form>
+
+    <header>
+        <div class="container">
+            <a href="/">   
+                <img class="logo" src="https://i.imgur.com/pavAZM6.png">
+            </a> 
+          <nav>
+            <ul>
+              <li><a class="links" href="/artwork">Back</a></li>
+              <li><a class="links" href="/auth/google">Log In</a></li>
+            </ul>
+          </nav>
+    
+        </div>
+    </header>
+
+    <div class="form-container">
+        <div class="form">
+            <div class="subtitle">Add your Art!</div>
+
+        <div class="input-container ic1">
+          <input id="name" class="input" type="text" placeholder=" " />
+          
+          <label for="name" class="placeholder">Title of your Masterpiece</label>
+        </div>
+
+
+        <div class="input-container ic2">
+          <input id="description" class="input" type="text" placeholder=" " />
+          <label for="description" class="placeholder">description</label>
+        </div>
+
+        <div class="input-container ic2">
+          <input id="imgUrl" class="input" type="text" placeholder=" " />
+          <label for="imgUrl" class="placeholder">Image URL</>
+        </div>
+        <button type="text" class="submit">submit</button>
+      </div>
+    </div>
+
+
+   
 </body>
 </html>
+
