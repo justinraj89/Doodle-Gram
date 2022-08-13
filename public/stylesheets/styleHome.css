@@ -12,9 +12,17 @@
     justify-content: center;
 }
 
+#enter {
+    text-decoration: none;
+    font-family: Nanum Pen Script;
+    font-size: 60px;
+    color: black;
+}
+
 
 h1 {
     text-align: center;
     font-family: Nanum Pen Script;
     font-size: 80px;
+    margin-bottom: -20px;
 }

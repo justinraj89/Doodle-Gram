@@ -1,22 +1,44 @@
-.brand-logo {
-  margin-left: 15px;
+
+.container {
+  margin: 0 auto;
+  width: 95%;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
+.links {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: Nanum Pen Script;
 }
 
-#search-row form {
-  padding-top: 20px;
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.student-name {
-  position: relative;
-  top: -5px;
+nav li {
+  display: inline-block;
+  margin-left: 70px;
 }
 
-.collection-item form {
-  margin-top: -5px;
+header {
+  background-color: black;
 }
 
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
 
+.logo {
+  width: 120px;
+  float: left;
+}
+
+nav {
+  float: right;
+  margin-left: 70px;
+  padding-top: 35px;
+}

@@ -8,15 +8,13 @@
 </head>
 <body>
     <h2>Add your own Artwork Below!</h2>
-    <form action="/" method="POST" enctype="multipart/form-data">
-        <label for="name">Title:</label><br>
+    <form action="/artwork" method="POST">
+        <label>Title:</label><br>
         <input type="text" name="name"><br>
-        <label for="description">Description:</label><br>
+        <label>Description:</label><br>
         <input type="text" name="description"><br>
-        <br>
-        <label for="image"></label>
-        <input type="file" name="image">
-        <br>
+        <label>IMG url</label><br>
+        <input type="text" name="img"><br>
         <br>
         <input type="submit" value="submit">
       </form>

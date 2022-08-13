@@ -2,12 +2,9 @@ const mongoose = require('mongoose');
 
 
 const artworkSchema = new mongoose.Schema({
-    name: String,
+    name: {type: String, required: true},
     description: String,
-    img: {
-        type: String,
-        required: true
-    },
+    img: String, 
 })
 
  module.exports = mongoose.model('Artwork', artworkSchema);
