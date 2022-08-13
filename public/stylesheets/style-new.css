@@ -138,10 +138,11 @@
   box-sizing: border-box;
   color: black;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 30px;
+  font-family: Nanum Pen Script;
   height: 50px;
   margin-top: 38px;
-  // outline: 0;
+  outline: 0;
   text-align: center;
   width: 100%;
 }

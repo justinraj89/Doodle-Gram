@@ -42,3 +42,24 @@ nav {
   margin-left: 70px;
   padding-top: 35px;
 }
+
+.layout-ul {
+  list-style: none;
+}
+
+.body-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  height: 250px;
+  width: 97vw;
+  margin-top: 50px;
+}
+
+.body-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 3px solid black;
+}
