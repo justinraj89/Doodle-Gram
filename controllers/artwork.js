@@ -10,6 +10,8 @@ function newPost(req, res){
 
 function create(req, res){
     console.log(req.body, '<--- req.body');
+    console.log(req.body.name, '<-----req.body.name');
+    console.log(req.body.description, '<-----req.body.description');
 
 
 
