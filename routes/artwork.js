@@ -5,6 +5,7 @@ const isLoggedIn = require('../config/auth');
 
 router.get('/', artworkController.index);
 router.get('/new', artworkController.new);
+router.get('/:id', artworkController.show);
 router.post('/', artworkController.create);
 
 

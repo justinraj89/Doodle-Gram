@@ -7,9 +7,17 @@ function index(req, res) {
             res.send('You Have an Error')
         }
         res.render('artwork/index.ejs', {
-            allArt: allArt
+            artworks: allArt
         });
     });  
+}
+
+function show(req, res) {
+    console.log(req.params, '<---req.params right HERE');
+    Artwork.findById(req.params.id, function(err, art) {
+        console.log(art, '<---art right here')
+        res.render('artwork/show', {art: art})
+    })
 }
 
 
@@ -35,7 +43,8 @@ function newPost(req, res){
 module.exports = {
     index,
     new: newPost,
-    create
+    create,
+    show
 }
 
 

@@ -26,15 +26,18 @@
   </header>
 
   <h1>DoodleGram</h1>
+  <p>Login to add your own Artwork!</p>
+
 
   <div class="body-container">
-    <img src="https://i.imgur.com/jkxfLhl.png">
-    <img src='https://i.imgur.com/jZk4bW8.png'>
-    <img src="https://i.imgur.com/bvX26zj.png">
-    <img src="https://i.imgur.com/Te91TQs.png">
-    <img src="https://i.imgur.com/jkxfLhl.png">
-    <img src="https://i.imgur.com/0zu2Kgg.png">
+    <% artworks.forEach(art => { %>
+      <a href="/artwork/<%= art._id %>">
+        <img src="<%= art.img %>">
+      </a>
+    <% }) %>
   </div>
+
+
 
  
  
@@ -45,3 +48,16 @@
 
 
 
+
+
+
+
+
+<!-- <div class="body-container">
+  <img src="https://i.imgur.com/jkxfLhl.png">
+  <img src='https://i.imgur.com/jZk4bW8.png'>
+  <img src="https://i.imgur.com/bvX26zj.png">
+  <img src="https://i.imgur.com/Te91TQs.png">
+  <img src="https://i.imgur.com/jkxfLhl.png">
+  <img src="https://i.imgur.com/0zu2Kgg.png">
+</div> -->

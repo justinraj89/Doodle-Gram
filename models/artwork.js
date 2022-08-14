@@ -7,4 +7,12 @@ const artworkSchema = new mongoose.Schema({
     img: String, 
 })
 
+const commentSchema = new mongoose.Schema({
+    profileId: String,
+    comment: String,
+    artworkId: {type: mongoose.Schema.Types.ObjectId, ref: 'Artwork'}
+})
+
+
+
  module.exports = mongoose.model('Artwork', artworkSchema);
