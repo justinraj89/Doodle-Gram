@@ -27,13 +27,18 @@
         </div>
     </header>
 
-   
-    <div><%= art.name %> </div>
+    <div class="body-container">
 
-    <div><%= art.description %> </div>
 
-    <div class="art-pic">
-        <img src="<%= art.img %>">
+        <div class="name-description">
+            <h1 class="title"><%= art.name %> </h1>
+            <p class="description"><%= art.description %> </p>
+        </div>  
+
+        <div class="art-pic">
+            <img src="<%= art.img %>">
+        </div>
+
     </div>
 
 </body>

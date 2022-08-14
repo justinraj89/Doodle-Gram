@@ -2,7 +2,7 @@ const Artwork = require('../models/artwork');
 
 function index(req, res) {
     Artwork.find({}, function(err, allArt){
-        console.log(allArt, '<--- all the art');
+        // console.log(allArt, '<--- all the art');
         if(err) {
             res.send('You Have an Error')
         }
