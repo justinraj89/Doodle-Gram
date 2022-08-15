@@ -30,7 +30,7 @@ passport.use(new GoogleStrategy(
 		user = await User.create({
 		  name: profile.displayName,
 		  googleId: profile.id,
-		  profile: profile._json
+		  email: profile.emails[0].value,
 		});
 		return cb(null, user);
 	  } catch (err) {

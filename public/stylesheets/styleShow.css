@@ -2,6 +2,8 @@ body {
     background-color: black;
 }
 
+
+/* BELOW IS FOR THE NAV BAR */
 .container {
     margin: 0 auto;
     width: 95%;
@@ -51,38 +53,68 @@ body {
   }
 
 
-  .body-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 20px;
-}
 
+/* BELOW IS FOR THE BODY OF THE PAGE */
+
+
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 
 .title {
     text-align: center;
     font-family: Nanum Pen Script;
-    font-size: 55px;
+    font-size: 80px;
     color: white;
 }
 
 .description {
-    text-align: center;
-    font-family: Nanum Pen Script;
-    font-size: 30px;
-    padding-left: 20px;
-    color: white;
+  margin-top: -30px;
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 35px;
+  color: white;
+}
+
+.comment-header {
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 30px;
+  color: white;
+
+}
+
+/* .posted-by {
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 30px;
+  color: white;
+} */
+
+.all-comments {
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 30px;
+  color: white;
+}
+
+.art-pic {
+  display: flex;
+  justify-content: center;
 }
 
 .art-pic img {
-    width: 100%;
+    width: 450px;
     max-width: 500px;
     border: 5px solid rgb(118, 118, 118);
     border-radius: 3%;
 }
 
 .addComment {
-  margin-top: 100px;
+  margin-top: 20px;
   text-align: center;
   font-family: Nanum Pen Script;
   font-size: 30px;
@@ -94,6 +126,25 @@ body {
   text-decoration: underline;
 }
 
+.comments {
+  margin-top: -20px;
+}
+
+.login-to-comment {
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 30px;
+  color: white;
+}
+
+.posted-by {
+  margin-top: -40px;
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 30px;
+  padding-left: 20px;
+  color: white;
+}
 
 
 .form-container {
@@ -189,20 +240,20 @@ background-color: rgb(168, 168, 168);
 background-color: rgb(137, 137, 137);
 }
 
-.all-comments {
-  text-align: center;
-    font-family: Nanum Pen Script;
-    font-size: 30px;
-    padding-left: 20px;
-    color: white;
+
+@media only screen and (max-width: 768px) {
+ 
+  .art-pic {
+    margin: 0 auto;
+  }
+
+  .art-pic img {
+    width: 320px;
+    max-width: 400px;
+    border: 5px solid rgb(118, 118, 118);
+    border-radius: 3%;
 }
 
-.comment-header {
-  text-align: center;
-  font-family: Nanum Pen Script;
-  font-size: 30px;
-  padding-left: 20px;
-  color: white;
-  padding-top: 50px;
 }
+
 

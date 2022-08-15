@@ -45,6 +45,7 @@ nav li {
 
 header {
   background-color: black;
+  max-height: 100px;
 }
 
 header::after {
@@ -91,4 +92,31 @@ nav {
 
 .body-container img:hover {
   transform: translateY(-5px);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .body-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    height: 250px;
+    width: 75vw;
+    margin: 0 auto;
+  }
+
+  .links {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: Nanum Pen Script;
+  }
+
+  .logo {
+    width: 120px;
+    float: left;
+  }
+
+
 }
