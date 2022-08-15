@@ -54,7 +54,7 @@ body {
   .body-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 
@@ -81,5 +81,128 @@ body {
     border-radius: 3%;
 }
 
+.addComment {
+  margin-top: 100px;
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 30px;
+  padding-left: 20px;
+  color: white;
+}
 
+.comment-header {
+  text-decoration: underline;
+}
+
+
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.form {
+background-color: black;
+box-sizing: border-box;
+height: 400px;
+padding: 20px;
+width: 400px;
+border-radius: 5%;
+}
+
+
+
+
+.input-container {
+height: 50px;
+position: relative;
+width: 100%;
+}
+
+.ic1 {
+margin-top: 40px;
+}
+
+
+.input {
+font-family: Nanum Pen Script;
+background-color: white;
+border-radius: 12px;
+border: 0;
+box-sizing: border-box;
+color: black;
+font-size: 25px;
+height: 100%;
+outline: 0;
+padding: 4px 20px 0;
+width: 100%;
+}
+
+.placeholder {
+color: black;
+font-family: Nanum Pen Script;
+left: 20px;
+font-size: 25px;
+line-height: 14px;
+pointer-events: none;
+position: absolute;
+transform-origin: 0 50%;
+transition: transform 200ms, color 200ms;
+top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+transform: translateY(-40px) translateX(5px) scale(0.75);
+} */
+
+.input:not(:placeholder-shown) ~ .placeholder {
+color: #808097;
+}
+
+.input:focus ~ .placeholder {
+color: black;
+}
+
+.submit {
+background-color: white;
+border-radius: 12px;
+border: 0;
+box-sizing: border-box;
+color: black;
+cursor: pointer;
+font-size: 30px;
+font-family: Nanum Pen Script;
+height: 50px;
+margin-top: 38px;
+outline: 0;
+text-align: center;
+width: 100%;
+}
+
+.submit:hover {
+background-color: rgb(168, 168, 168);
+}
+
+.submit:active {
+background-color: rgb(137, 137, 137);
+}
+
+.all-comments {
+  text-align: center;
+    font-family: Nanum Pen Script;
+    font-size: 30px;
+    padding-left: 20px;
+    color: white;
+}
+
+.comment-header {
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 30px;
+  padding-left: 20px;
+  color: white;
+  padding-top: 50px;
+}
 

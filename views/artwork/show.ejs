@@ -14,25 +14,54 @@
 
     <header>
         <div class="container">
-            <a href="/">   
-                <img class="logo" src="https://i.imgur.com/pavAZM6.png">
-            </a> 
+          <a href="/">   
+            <img class="logo" src="https://i.imgur.com/pavAZM6.png">
+          </a> 
           <nav>
-            <ul>
-              <li><a class="links" href="/artwork">Back</a></li>
-              <li><a class="links" href="/auth/google">Log In</a></li>
-            </ul>
+            <% if (user) { %>
+              <ul>
+                <li><a class="links" href="/artwork">Back</a></li>
+                <li><a class="links" href="/logout">Log out</a></li>
+              </ul>
+              <% } else { %>
+                <ul>
+                  <li><a class="links" href="/artwork">Back</a></li>
+                  <li><a class="links" href="/auth/google">Log In</a></li>
+                </ul>
+            <% } %>
           </nav>
-    
         </div>
-    </header>
+      </header>
 
     <div class="body-container">
-
-
         <div class="name-description">
             <h1 class="title"><%= art.name %> </h1>
             <p class="description"><%= art.description %> </p>
+
+            <div class="all-comments"> 
+              <p class="comment-header">Comments</p>
+              <% art.comments.forEach(c => { %>
+                <p><%= c.comment %> </p>
+              <% }) %>
+            </div>
+
+
+            <% if (user) { %>
+             
+            <div class="form-container">
+              <form class="form" action="/artwork/<%= art._id %>/comments" method="POST">
+                  <div class="addComment">Add Comment Below</div>
+      
+              <div class="input-container ic1">
+                <input id="comment" class="input" type="text" name="comment" placeholder=" " />
+                <label for="comment" class="placeholder">add comment</label>
+              </div>
+
+              <button type="text" class="submit">submit</button>
+             </form>
+          </div>
+          <% } %>
+
         </div>  
 
         <div class="art-pic">

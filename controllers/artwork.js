@@ -1,4 +1,5 @@
 const Artwork = require('../models/artwork');
+const Comment = require('../models/artwork');
 
 function index(req, res) {
     Artwork.find({}, function(err, allArt){
@@ -13,9 +14,7 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    console.log(req.params, '<---req.params right HERE');
     Artwork.findById(req.params.id, function(err, art) {
-        console.log(art, '<---art right here')
         res.render('artwork/show', {art: art})
     })
 }
@@ -24,15 +23,43 @@ function show(req, res) {
 
 function create(req, res){
     // console.log(req.body, '<-req.body')
-    const artwork = new Artwork(req.body);
-    artwork.save(function(err){
+    const art = new Artwork(req.body);
+    art.save(function(err){
         if(err) return res.send('!ERROR!');
-        console.log(artwork, '<----ARTWORK THAT GOT CREATED');
+        // console.log("new artwork",art);
         res.redirect('/artwork');
     });
 }
 
 
+function addComment(req, res){
+    Artwork.findById(req.params.id, function(err, art){
+        console.log(art, '<---- art before the PUSH')
+
+        art.comments.push(req.body)
+        art.save(function(err){
+            res.redirect(`/artwork/${req.params.id}`);
+        })
+        console.log(art, '<---ART AFTER THE PUSH')
+    })
+}
+
+
+
+// function rateArtwork(req, res){
+//     // console.log(req.body, '<-req.body')
+//     Artwork.findById(req.params.id, function(err, art) {
+//         console.log("art",art);
+//         art.ratings.push(
+//             new rating({
+//                 userId: user._id,
+//                 rating: req.body.rating
+//             })
+//         )
+        
+//         art.save();
+//     })
+// }
 
 
 
@@ -44,7 +71,28 @@ module.exports = {
     index,
     new: newPost,
     create,
-    show
+    show,
+    // rateArtwork,
+    addComment
 }
 
 
+// function addComment(req, res){
+//     console.log(req.user, '<---req.user here');
+//     // console.log(req.body, '<-req.body')
+//     Artwork.findById(req.params.id, function(err, art) {
+//         // console.log("art",art);
+//         // console.log(req.body, '<---req.body for add comment function here')
+
+//         art.comments.push(
+//             new Comment({
+//                 userId: user._id,
+//                 username: user.profile.name,
+//                 comment: req.body.comment
+//             })
+//         )
+//         art.save(function(err ){
+//             res.redirect(`/artwork/${art._id}`);
+//         });
+//     })
+// }
