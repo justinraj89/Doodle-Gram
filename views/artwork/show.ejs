@@ -49,6 +49,9 @@
           <img src="<%= art.img %>">
         </div>
        
+        <form class="delete-form" action="/artwork/<%= art._id %>?_method=DELETE" method="POST">
+          <button class="delete-post" type="submit">Delete your Post</button>
+        </form>
         
 
         <div class="all-comments">

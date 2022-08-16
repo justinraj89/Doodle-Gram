@@ -35,25 +35,14 @@ function create(req, res){
 }
 
 
-
-
-
-
-// function rateArtwork(req, res){
-//     // console.log(req.body, '<-req.body')
-//     Artwork.findById(req.params.id, function(err, art) {
-//         console.log("art",art);
-//         art.ratings.push(
-//             new rating({
-//                 userId: user._id,
-//                 rating: req.body.rating
-//             })
-//         )
-        
-//         art.save();
-//     })
-// }
-
+function deletePost(req, res){
+    Artwork.findOneAndDelete(
+        {_id: req.params.id, userId: req.user._id },
+        function(err) {
+            res.redirect('/artwork');
+        }
+    )
+}
 
 
 function newPost(req, res){
@@ -65,6 +54,6 @@ module.exports = {
     new: newPost,
     create,
     show,
-    // rateArtwork,
+    deletePost
 }
 

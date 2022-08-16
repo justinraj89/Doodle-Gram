@@ -7,6 +7,7 @@ router.get('/', artworkController.index);
 router.get('/new', artworkController.new);
 router.get('/:id', artworkController.show);
 router.post('/', artworkController.create);
+router.delete('/:id', artworkController.deletePost);
 
 
 

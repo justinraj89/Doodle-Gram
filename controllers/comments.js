@@ -23,8 +23,6 @@ async function deleteComment(req, res){
         'comments._id': req.params.id
       });
   
-      //if(!art) { res.redirect(`/artwork/${art._id}`); }
-  
       art.comments.remove(req.params.id);
   
       await art.save();

@@ -111,6 +111,17 @@ body {
     border-radius: 3%;
 }
 
+.delete-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.delete-post {
+  font-family: Nanum Pen Script;
+  font-size: 20px;
+}
+
 .addComment {
   margin-top: 20px;
   text-align: center;
