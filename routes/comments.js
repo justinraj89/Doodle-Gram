@@ -5,7 +5,10 @@ const isLoggedIn = require('../config/auth');
 
 
 router.post('/artwork/:id/comments', commentController.addComment);
-router.delete('/comments/:id', commentController.deleteComment)
+router.delete('/comments/:id', commentController.deleteComment);
+
+
+
 
 
 

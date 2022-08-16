@@ -14,14 +14,11 @@ function index(req, res) {
 }
 
 
-
 function show(req, res) {
     Artwork.findById(req.params.id, function(err, art) {
         res.render('artwork/show', {art: art})
     })
 }
-
-
 
 
 function create(req, res){
@@ -49,11 +46,48 @@ function newPost(req, res){
     res.render('artwork/new.ejs')
 }
 
+
+function editPost(req, res){
+    Artwork.findOne({ _id: req.params.id, userId: req.user._id}, function(err, post){
+        console.log(post, '<----POST HERE')
+        if(err || !post) return res.redirect('/artwork');
+        res.render('artwork/edit', {post})
+    });
+}
+
+
+function updatePost(req, res){
+    Artwork.findOneAndUpdate(
+        { _id: req.params.id, userId: req.user._id},
+        req.body,
+        {new:true},
+        function(err, post) {
+            if (err || !post) res.redirect('/artwork');
+            res.redirect(`/artwork/${post._id}`);
+        }
+    );
+}
+
+
 module.exports = {
     index,
     new: newPost,
     create,
     show,
-    deletePost
+    deletePost,
+    editPost,
+    updatePost
 }
 
+
+// function updatePost(req, res){
+//     Artwork.findOneAndUpdate(
+//         { _id: req.params.id, userId: req.user._id},
+//         req.body,
+//         {new:true},
+//         function(err, post) {
+//             if (err || !post) res.redirect('/artwork');
+//             res.redirect(`/artwork/${post._id}`);
+//         }
+//     );
+// }

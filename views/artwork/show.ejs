@@ -34,17 +34,14 @@
       </header>
 
 
-
-
-
-
-
-
       <div class="body-container">
 
         <h1 class="title"><%= art.name %> </h1>
-        <p class="posted-by">Posted By: <%= art.userName %> </p>
+        <p class="posted-by">Posted By: <span class="posted-by-color"><%= art.userName %></span> </p>
         <p class="description"><%= art.description %> </p>
+        <% if (user && art.userId.equals(user._id)) { %>
+        <a class="edit-post" href="/artwork/<%= art._id %>/edit ">Edit Post</a>
+        <% } %>
         <div class="art-pic">
           <img src="<%= art.img %>">
         </div>
@@ -63,16 +60,11 @@
             
             <% if (user && c.userId.equals(user._id)) { %>
             <form class="comments" action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-              <button class="comments" type="text" class="submit">delete</button><br>
+              <button class="comments" type="text" class="submit">delete</button>
             </form>
             <% } else { %>
             <br/>            
             <% } %>
-
-
-
-
-            
           <% }) %>
         </div>
 
@@ -92,17 +84,7 @@
         <% } else { %>
             <p class="login-to-comment">Login to add comments!</p>
         <% } %> 
-
-        
-
       </div> 
-
-
-
-
-
-
-
 </body>
 </html>
 

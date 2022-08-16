@@ -39,7 +39,8 @@ async function deleteComment(req, res){
 
 
 
+
 module.exports = {
     addComment,
-    deleteComment
+    deleteComment,
 }
