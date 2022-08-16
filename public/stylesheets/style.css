@@ -117,6 +117,8 @@ nav {
     border-radius: 3%;
 }
 
+
+
 nav li {
   display: inline-block;
   margin-left: 10px;
@@ -124,7 +126,7 @@ nav li {
 
 .links {
   color: white;
-  font-size: 28px;
+  font-size: 18px;
   text-decoration: none;
   font-family: Nanum Pen Script;
 }

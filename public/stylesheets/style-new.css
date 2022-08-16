@@ -158,3 +158,36 @@ body {
 .submit:active {
   background-color: rgb(137, 137, 137);
 }
+
+
+@media only screen and (max-width: 768px) {
+ 
+
+
+
+nav li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.links {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: Nanum Pen Script;
+}
+
+.logo {
+  width: 120px;
+  float: left;
+}
+
+.description {
+  margin-top: -30px;
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 28px;
+  color: white;
+}
+
+}
