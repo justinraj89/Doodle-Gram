@@ -79,15 +79,3 @@ module.exports = {
     updatePost
 }
 
-
-// function updatePost(req, res){
-//     Artwork.findOneAndUpdate(
-//         { _id: req.params.id, userId: req.user._id},
-//         req.body,
-//         {new:true},
-//         function(err, post) {
-//             if (err || !post) res.redirect('/artwork');
-//             res.redirect(`/artwork/${post._id}`);
-//         }
-//     );
-// }

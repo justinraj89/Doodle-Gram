@@ -122,9 +122,73 @@ body {
 }
 
 .delete-post {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid white;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
   font-family: Nanum Pen Script;
-  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: black;
+  font-size: 22px;
 }
+
+.delete-post:hover {
+  color: black;
+  background-color: white;
+}
+
+
+.delete-comment-btn {
+  height: 36px;
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid white;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Nanum Pen Script;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: black;
+  font-size: 22px;
+}
+
+.delete-comment-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.edit-button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid white;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Nanum Pen Script;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: black;
+  font-size: 22px;
+}
+
+.edit-button:hover {
+  color: black;
+  background-color: white;
+}
+
 
 .addComment {
   margin-top: 20px;

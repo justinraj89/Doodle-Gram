@@ -40,7 +40,7 @@
         <p class="posted-by">Posted By: <span class="posted-by-color"><%= art.userName %></span> </p>
         <p class="description"><%= art.description %> </p>
         <% if (user && art.userId.equals(user._id)) { %>
-        <a class="edit-post" href="/artwork/<%= art._id %>/edit ">Edit Post</a>
+        <a class="edit-post" href="/artwork/<%= art._id %>/edit"><button class="edit-button" type="button">Edit Post</button></a>
         <% } %>
         <div class="art-pic">
           <img src="<%= art.img %>">
@@ -60,7 +60,7 @@
             
             <% if (user && c.userId.equals(user._id)) { %>
             <form class="comments" action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-              <button class="comments" type="text" class="submit">delete</button>
+              <button class="comments delete-comment-btn" type="text" class="submit">delete</button>
             </form>
             <% } else { %>
             <br/>            
