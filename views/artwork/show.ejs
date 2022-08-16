@@ -49,10 +49,12 @@
           <img src="<%= art.img %>">
         </div>
        
+
+        <% if (user && art.userId.equals(user._id)) { %>
         <form class="delete-form" action="/artwork/<%= art._id %>?_method=DELETE" method="POST">
           <button class="delete-post" type="submit">Delete your Post</button>
         </form>
-        
+        <% } %>
 
         <div class="all-comments">
           <p class="comment-header">Comments</p>
