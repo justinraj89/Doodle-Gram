@@ -4,7 +4,9 @@ const commentController = require('../controllers/comments');
 const isLoggedIn = require('../config/auth');
 
 
-router.post('/:id/comments', commentController.addComment);
+router.post('/artwork/:id/comments', commentController.addComment);
+router.delete('/comments/:id', commentController.deleteComment)
+
 
 
 

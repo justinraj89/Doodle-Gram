@@ -55,7 +55,7 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 app.use('/artwork', artworkRouter);
-app.use('/artwork', commentRouter);
+app.use('/', commentRouter);
 
 
 

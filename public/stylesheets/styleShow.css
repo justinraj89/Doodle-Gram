@@ -87,12 +87,10 @@ body {
 
 }
 
-/* .posted-by {
-  text-align: center;
-  font-family: Nanum Pen Script;
-  font-size: 30px;
-  color: white;
-} */
+.btn {
+  background-color: red;
+}
+
 
 .all-comments {
   text-align: center;
@@ -127,6 +125,7 @@ body {
 }
 
 .comments {
+  display: inline;
   margin-top: -20px;
 }
 
@@ -252,6 +251,31 @@ background-color: rgb(137, 137, 137);
     max-width: 400px;
     border: 5px solid rgb(118, 118, 118);
     border-radius: 3%;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.links {
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  font-family: Nanum Pen Script;
+}
+
+.logo {
+  width: 120px;
+  float: left;
+}
+
+.description {
+  margin-top: -30px;
+  text-align: center;
+  font-family: Nanum Pen Script;
+  font-size: 28px;
+  color: white;
 }
 
 }

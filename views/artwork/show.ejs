@@ -14,7 +14,7 @@
 
     <header>
         <div class="container">
-          <a href="/">   
+          <a href="/artwork">   
             <img class="logo" src="https://i.imgur.com/pavAZM6.png">
           </a> 
           <nav>
@@ -55,6 +55,19 @@
           <p class="comment-header">Comments</p>
           <% art.comments.forEach(c => { %>
             <p class="comments"><%= c.userName %>: <%= c.comment %> </p>
+            
+            <% if (user && c.userId.equals(user._id)) { %>
+            <form class="comments" action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+              <button class="comments" type="text" class="submit">delete</button><br>
+            </form>
+            <% } else { %>
+            <br/>            
+            <% } %>
+
+
+
+
+            
           <% }) %>
         </div>
 

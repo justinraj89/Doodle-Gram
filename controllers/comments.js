@@ -16,11 +16,32 @@ function addComment(req, res){
     })
 }
 
-
+async function deleteComment(req, res){
+    try {
+  
+      const art = await Artwork.findOne({
+        'comments._id': req.params.id
+      });
+  
+      //if(!art) { res.redirect(`/artwork/${art._id}`); }
+  
+      art.comments.remove(req.params.id);
+  
+      await art.save();
+      // redirect back to the page they came from!
+      res.redirect(`/artwork/${art._id}`)
+  
+  
+    } catch(err){
+      console.error(err)
+      res.send(err)
+    }
+  }
 
 
 
 
 module.exports = {
-    addComment
+    addComment,
+    deleteComment
 }
