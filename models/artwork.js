@@ -1,11 +1,5 @@
 const mongoose = require('mongoose');
 
-// const ratingSchema = new mongoose.Schema({
-//     rating: { type: String},
-//     userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-//     artworkId: {type: mongoose.Schema.Types.ObjectId, ref: 'Artwork'}
-// })
-
 
 const commentSchema = new mongoose.Schema({
     userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},

@@ -16,6 +16,7 @@ function addComment(req, res){
     })
 }
 
+
 async function deleteComment(req, res){
     try {
   
@@ -26,7 +27,6 @@ async function deleteComment(req, res){
       art.comments.remove(req.params.id);
   
       await art.save();
-      // redirect back to the page they came from!
       res.redirect(`/artwork/${art._id}`)
   
   

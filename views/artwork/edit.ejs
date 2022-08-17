@@ -20,7 +20,7 @@
       <nav>
         <% if (user) { %>
           <ul>
-            <li><a class="links" href="/artwork">Back</a></li>
+            <li><a class="links" href="/artwork/<%= post._id %>">Back</a></li>
             <li><a class="links" href="/logout">Log out</a></li>
           </ul>
           <% } else { %>
