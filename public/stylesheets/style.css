@@ -32,6 +32,8 @@ p {
   font-family: Nanum Pen Script;
 }
 
+
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -41,6 +43,11 @@ nav ul {
 nav li {
   display: inline-block;
   margin-left: 70px;
+  transition: transform 250ms;
+}
+
+nav li:hover {
+  transform: translateY(-2px);
 }
 
 header {
@@ -86,7 +93,6 @@ nav {
   object-fit: cover;
   border: 3px solid rgb(118, 118, 118);
   border-radius: 3%;
-
   transition: transform 250ms;
 }
 

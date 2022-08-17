@@ -23,6 +23,11 @@ body {
   nav li {
     display: inline-block;
     margin-left: 70px;
+    transition: transform 250ms;
+  }
+  
+  nav li:hover {
+    transform: translateY(-2px);
   }
   
   header {
