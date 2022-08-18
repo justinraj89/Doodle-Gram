@@ -8,9 +8,4 @@ router.post('/artwork/:id/comments', commentController.addComment);
 router.delete('/comments/:id', commentController.deleteComment);
 
 
-
-
-
-
-
 module.exports = router;

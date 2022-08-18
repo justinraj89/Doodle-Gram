@@ -59,8 +59,6 @@ body {
   }
 
 
-
-
 .form-container {
     display: flex;
     justify-content: center;
@@ -75,7 +73,6 @@ body {
   width: 450px;
   border-radius: 5%;
 }
-
 
 .subtitle {
   color: #eee;

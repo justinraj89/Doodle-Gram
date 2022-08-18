@@ -12,12 +12,4 @@ router.get('/:id/edit', artworkController.editPost);
 router.put('/:id', artworkController.updatePost);
 
 
-
-
-
-
-
-
-
-
 module.exports = router;
