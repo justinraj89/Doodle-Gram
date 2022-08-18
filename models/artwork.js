@@ -8,8 +8,6 @@ const commentSchema = new mongoose.Schema({
     artworkId: {type: mongoose.Schema.Types.ObjectId, ref: 'Artwork'}
 })
 
-
-
 const artworkSchema = new mongoose.Schema({
     name: {type: String, required: true},
     userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
@@ -19,7 +17,5 @@ const artworkSchema = new mongoose.Schema({
     // ratings: [ratingSchema],
     comments: [commentSchema]
 })
-
-
 
  module.exports = mongoose.model('Artwork', artworkSchema);
