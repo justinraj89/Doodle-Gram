@@ -1,35 +1,64 @@
-# passport-boilerplate
+# DoodleGram
+
+DoodleGram is an application I developed for artists to showcase their art. In this application, you have the ability to login, post your own Artwork (including a Title, and short description of your art), and comment on other users posts. You may also edit/delete your own post(s).
+
+If you do not log in, you will still have the ability to view all of the Artwork, along with the comments belonging to each post.
 
 
-This is your passport boilerplate.
-
-## Setup 
-
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+## Screenshots
 
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin main` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin main`
 
-#### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
+### Home Page (Logged In)
+![HomePage](https://i.imgur.com/QZN9JQu.png)
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
+### View Post (Not Logged In)
+![ViewPost](https://i.imgur.com/bOimYc0.png)
 
-#### Make a commit 
+### View Post (Logged In)
+![ViewPost](https://i.imgur.com/QoaWBCZ.png)
 
-```git commit -m "setup up oauth and User Model"```
+### New Post
+![NewPost](https://i.imgur.com/q74rtDX.png)
+
+### Edit Post
+![EditPost](https://i.imgur.com/O5d8zwP.png)
+
+### Wire Frame 
+![WireFrame](https://i.imgur.com/u8tP2Pn.png)
+
+## Technologies Used
+
+- Node.js
+- MongoDB
+- Mongoose
+- Express
+- EJS
+
+## Getting Started
+
+Link to [Trello Board](https://trello.com/b/1Yp7uziE/doodlegram) here.
+
+Link to deployed Application [here](https://doodle-gram.herokuapp.com/artwork
+
+
+## Next Steps
+
+- Modify NavBar so that it sticks to top of screen when scrolling (for easy login without having to scroll back to the top).
+- Implement a "Like" button.
+- Implement a double tap for "Like" on mobile.
+- Allow users to upload photos from their computer along with the ability to past Image URL.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
