@@ -47,7 +47,7 @@ Link to deployed Application [here](https://doodle-gram.herokuapp.com/artwork
 - Modify NavBar so that it sticks to top of screen when scrolling (for easy login without having to scroll back to the top).
 - Implement a "Like" button.
 - Implement a double tap for "Like" on mobile.
-- Allow users to upload photos from their computer along with the ability to past Image URL.
+- Allow users to upload photos from their computer along with the ability to paste Image URL.
 
 
 
