@@ -39,7 +39,7 @@ If you do not log in, you will still have the ability to view all of the Artwork
 
 Link to [Trello Board](https://trello.com/b/1Yp7uziE/doodlegram) here.
 
-Link to deployed Application [here](https://doodle-gram.herokuapp.com/artwork
+Link to deployed Application [here](https://doodle-gram.herokuapp.com/artwork)
 
 
 ## Next Steps

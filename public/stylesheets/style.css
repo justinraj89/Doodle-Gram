@@ -19,7 +19,6 @@ p {
 }
 
 
-
 .container {
   margin: 0 auto;
   width: 95%;
@@ -123,7 +122,6 @@ nav {
     border: 5px solid rgb(118, 118, 118);
     border-radius: 3%;
 }
-
 
 
 nav li {

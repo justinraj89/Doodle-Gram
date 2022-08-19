@@ -14,7 +14,6 @@ const artworkSchema = new mongoose.Schema({
     userName: String,
     description: String,
     img: {type: String, required: true}, 
-    // ratings: [ratingSchema],
     comments: [commentSchema]
 })
 
